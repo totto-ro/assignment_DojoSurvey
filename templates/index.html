@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./../static/style.css') }}">
+    <link rel="stylesheet" href="./../static/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <main>
+        <section class="surveyBox">
+            <h1>
+                Dojo Survey 
+            </h1>
+            <form action="/process" method="POST">
+                <div class="inputLines">
+                    <label for="userName">
+                        Name:
+                    </label>
+                    <input type="text" id="userName" name="userName" />
+                </div>
+                <div class="inputLines">
+                    <label for="dojoLocation">
+                        Dojo Location:
+                    </label>
+                    <select name="dojoLocation" id="dojoLocation">
+                        <option value="">--Select Location--</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Seattle">Seatle</option>
+                        <option value="Online">Online</option>
+                        <option value="Burbank">Burbank</option>
+                    </select>
+                </div>
+                <div class="inputLines">
+                    <label for="favLanguage">
+                        Favorite Language:
+                    </label>
+                    <select name="favLanguage" id="favLanguage">
+                        <option value="">--Select Language--</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+                <div class="inputLines">
+                    <label for="userComments">
+                        Comments (optional):
+                    </label>
+                    <textarea name="userComments" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

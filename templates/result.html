@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./../static/style.css') }}">
+    <link rel="stylesheet" href="./../static/style.css">
+    <title>Results</title>
+</head>
+<body>
+    <main>
+        <section class="boxInfo">
+            <h1>Submitted Info</h1>
+            <div class="infoDetails">
+                <p><span> Name: </span> {{ session['userName'] }} </p>
+                <p><span> Location: </span> {{ session['dojoLocation'] }} </p>
+                <p><span> Favorite Language: </span> {{ session['favLanguage'] }} </p>
+                <p><span> Comments: </span> {{ session['userComments'] }} </p>
+            </div>
+            <div>
+                <button type="submit">
+                    <a href="/">Go Back</a>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
